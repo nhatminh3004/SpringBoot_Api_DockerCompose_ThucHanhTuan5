@@ -49,28 +49,15 @@ public class MayBay {
         this.tamBay = tamBay;
     }
 
-    public Set<NhanVien> getNhanViens() {
-        return nhanViens;
-    }
 
-    public void setNhanViens(Set<NhanVien> nhanViens) {
-        this.nhanViens = nhanViens;
-    }
 
     public MayBay() {
-    }
-
-    public MayBay(int mamayBay, String loai, int tamBay, Set<NhanVien> nhanViens) {
-        this.mamb= mamayBay;
-        this.loai = loai;
-        this.tamBay = tamBay;
-        this.nhanViens = nhanViens;
     }
 
     @Override
     public String toString() {
         return "MayBay{" +
-                "mamayBay=" + mamb +
+                "mamb=" + mamb +
                 ", loai='" + loai + '\'' +
                 ", tamBay=" + tamBay +
                 '}';

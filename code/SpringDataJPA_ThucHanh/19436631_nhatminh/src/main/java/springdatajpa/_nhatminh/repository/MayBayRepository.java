@@ -11,8 +11,7 @@ import javax.transaction.Transactional;
 import java.util.List;
 
 public interface MayBayRepository extends JpaRepository<MayBay, Integer> {
-    @Modifying
-    @Transactional
+
     @Query(value = "select * from maybay where  tambay >10000   ", nativeQuery = true)
     public List<MayBay> findMayBayTamBayHon10000();
 
