@@ -75,5 +75,10 @@ public class NhanVienController {
     public List<NhanVien>  cau25() {
         return  nhanVienService.findNhanVienKhongPhaiPhiCong();
     }
+    @GetMapping("/cau26")
+    public List<String>  cau26() {
+        return  nhanVienService.findNhanVienLuongCaoNhat();
+    }
+
 
 }
