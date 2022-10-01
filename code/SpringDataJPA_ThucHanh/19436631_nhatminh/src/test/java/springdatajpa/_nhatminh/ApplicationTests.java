@@ -340,7 +340,7 @@ class ApplicationTests {
         //Tổng lương phải trả cho nhân viên
     void cau27() {
 
-        List<String> list = nhanvienService.tongLuongTraNhanVien();
+        List<String> list = nhanvienService.tongLuongTraPhiCong();
 
 
         System.out.println("Tổng lương phải trả cho nhân viên là : " + list);
