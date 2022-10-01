@@ -30,4 +30,8 @@ public class MayBayController {
     public List<String> cau11() {
         return  mayBays.maMayBayNhanVienHoNGUYENLAI();
     }
+    @GetMapping("/cau13")
+    public List<String> cau13() {
+        return  mayBays.maMayBayThucHienDuongBayVn280();
+    }
 }
