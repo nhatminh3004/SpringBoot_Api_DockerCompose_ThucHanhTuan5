@@ -22,4 +22,8 @@ public class MayBayController {
     public List<MayBay>  cau2() {
         return  mayBays.findMayBayTamBayHon10000() ;
     }
+    @GetMapping("/cau7")
+    public int  cau7() {
+        return  mayBays.findSoMayBayBoeing() ;
+    }
 }
