@@ -71,5 +71,9 @@ public class NhanVienController {
         }
         return giaTriReturn;
     }
+    @GetMapping("/cau25")
+    public List<NhanVien>  cau25() {
+        return  nhanVienService.findNhanVienKhongPhaiPhiCong();
+    }
 
 }
