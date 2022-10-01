@@ -52,4 +52,16 @@ public class ChuyenBayController {
         }
         return giaTriReturn;
     }
+    @GetMapping("/cau19")
+    public List <HashMap<String, Object>> cau19() {
+        List<Object[]> listObject= chuyenbayRepository.tongchiphiphaitraPhiCongCuaTungChuyenBay();
+        List <HashMap<String,Object>> giaTriReturn =new ArrayList<>();
+        for (Object[] obj : listObject){
+            HashMap<String,Object> tempMap =new HashMap<>();
+            tempMap.put("Ga xuất phát :",obj[0]);
+            tempMap.put("Tổng chi phí phải trả :",obj[1]);
+            giaTriReturn.add(tempMap);
+        }
+        return giaTriReturn;
+    }
 }
