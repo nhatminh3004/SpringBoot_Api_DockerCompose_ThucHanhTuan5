@@ -11,7 +11,10 @@ import springdatajpa._nhatminh.repository.ChuyenbayRepository;
 import springdatajpa._nhatminh.repository.MayBayRepository;
 
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Objects;
 
 @RestController
 public class MayBayController {
@@ -33,5 +36,18 @@ public class MayBayController {
     @GetMapping("/cau13")
     public List<String> cau13() {
         return  mayBays.maMayBayThucHienDuongBayVn280();
+    }
+    @GetMapping("/cau16")
+    public List <HashMap<String, Object>> cau16() {
+        List<Object[]> listObject= mayBays.findvoiMoiLoaimaybayChoBietMaSoAndLoaiAndSoPhiCongCoTheLai();
+        List <HashMap<String,Object>> giaTriReturn =new ArrayList<>();
+        for (Object[] obj : listObject){
+            HashMap<String,Object> tempMap =new HashMap<>();
+            tempMap.put("Mã số máy bay :",obj[0]);
+            tempMap.put("Loại máy bay :",obj[1]);
+            tempMap.put("Tổng số phi công lái được :",obj[2]);
+            giaTriReturn.add(tempMap);
+        }
+        return giaTriReturn;
     }
 }

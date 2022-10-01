@@ -1,6 +1,7 @@
 package springdatajpa._nhatminh;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 
 import org.junit.jupiter.api.Test;
@@ -195,11 +196,11 @@ class ApplicationTests {
         //Với mỗi loại máy bay có phi công lái cho biết mã số, loại máy báy và tổng số phi công có thể lái loại máy bay đó.
     void cau16() {
 
-        List<String> listThongTinMayBay = maybayService.findvoiMoiLoaimaybayChoBietMaSoAndLoaiAndSoPhiCongCoTheLai();
+        List<Object[]> listThongTinMayBay = maybayService.findvoiMoiLoaimaybayChoBietMaSoAndLoaiAndSoPhiCongCoTheLai();
         System.out.println("Danh sách thông tin máy bay và loại tương ứng với số phi công có thể lái : ");
-        for (String info : listThongTinMayBay) {
+        for (Object[] info : listThongTinMayBay) {
 
-            System.out.println(info);
+            System.out.println("- Mã số: " + info[0] + ", Loại: " + info[1] + ", Tổng số phi công có thể lái: " + info[2]);
 
         }
     }

@@ -9,6 +9,7 @@ import springdatajpa._nhatminh.entity.MayBay;
 
 import javax.transaction.Transactional;
 import java.util.List;
+import java.util.Objects;
 
 public interface MayBayRepository extends JpaRepository<MayBay, Integer> {
 
@@ -24,5 +25,5 @@ public interface MayBayRepository extends JpaRepository<MayBay, Integer> {
     @Query(value = "select * from maybay where  tambay > (select  dodai from  chuyenbay where  macb='VN280') ", nativeQuery = true)
     public List<String> maMayBayThucHienDuongBayVn280();
     @Query(value = "select c.mamb,mb.loai,count(c.manv) AS \"Tổng số phi công có thể lái máy bay\" from maybay mb join chungnhan c on mb.mamb = c.mamb group by  c.mamb, mb.loai ", nativeQuery = true)
-    public List<String> findvoiMoiLoaimaybayChoBietMaSoAndLoaiAndSoPhiCongCoTheLai();
+    public List<Object[]> findvoiMoiLoaimaybayChoBietMaSoAndLoaiAndSoPhiCongCoTheLai();
 }
