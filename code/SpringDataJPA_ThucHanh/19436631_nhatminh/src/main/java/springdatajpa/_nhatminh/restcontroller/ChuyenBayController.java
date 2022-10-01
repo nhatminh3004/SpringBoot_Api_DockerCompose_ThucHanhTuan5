@@ -30,4 +30,8 @@ public class ChuyenBayController {
     public int cau6() {
         return chuyenbayRepository.sochuyenBayXuatPhatSaiGon("SGN");
     }
+    @GetMapping("/cau14")
+    public List<String> cau14() {
+        return chuyenbayRepository.chuyenbaythuchienByAirbusA320();
+    }
 }
