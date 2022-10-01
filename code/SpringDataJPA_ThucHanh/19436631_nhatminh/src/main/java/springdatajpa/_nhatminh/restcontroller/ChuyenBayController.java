@@ -34,4 +34,8 @@ public class ChuyenBayController {
     public List<String> cau14() {
         return chuyenbayRepository.chuyenbaythuchienByAirbusA320();
     }
+    @GetMapping("/cau17")
+    public List<ChuyenBay> cau17() {
+        return chuyenbayRepository.chuyenbayADenBVaQuayVeA();
+    }
 }
