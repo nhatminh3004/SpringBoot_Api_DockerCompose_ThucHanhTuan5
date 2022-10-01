@@ -68,4 +68,16 @@ public class ChuyenBayController {
     public List<String> cau20() {
         return chuyenbayRepository.danhsachChuyenBayKhoiHanhTruoc12h();
     }
+    @GetMapping("/cau21")
+    public List <HashMap<String, Object>> cau21() {
+        List<Object[]> listObject= chuyenbayRepository.cau21();
+        List <HashMap<String,Object>> giaTriReturn =new ArrayList<>();
+        for (Object[] obj : listObject){
+            HashMap<String,Object> tempMap =new HashMap<>();
+            tempMap.put("Ga xuất phát :",obj[0]);
+            tempMap.put("số lượng chuyến bay khởi hành trước 12h:",obj[1]);
+            giaTriReturn.add(tempMap);
+        }
+        return giaTriReturn;
+    }
 }
