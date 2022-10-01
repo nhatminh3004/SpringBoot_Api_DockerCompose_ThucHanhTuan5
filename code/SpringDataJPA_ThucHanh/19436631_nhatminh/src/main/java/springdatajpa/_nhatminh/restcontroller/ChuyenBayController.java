@@ -80,4 +80,8 @@ public class ChuyenBayController {
         }
         return giaTriReturn;
     }
+    @GetMapping("/cau28")
+    public List<ChuyenBay> cau28() {
+        return chuyenbayRepository.cau28();
+    }
 }
