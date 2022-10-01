@@ -58,5 +58,18 @@ public class NhanVienController {
         }
         return giaTriReturn;
     }
+    @GetMapping("/cau24")
+    public List <HashMap<String, Object>> cau24() {
+        List<Object[]> listObject= nhanVienService.cau24();
+        List <HashMap<String,Object>> giaTriReturn =new ArrayList<>();
+        for (Object[] obj : listObject){
+            HashMap<String,Object> tempMap =new HashMap<>();
+            tempMap.put("Mã phi công :",obj[0]);
+            tempMap.put("Tổng số máy bay phi công có thể lái  :",obj[1]);
+
+            giaTriReturn.add(tempMap);
+        }
+        return giaTriReturn;
+    }
 
 }
