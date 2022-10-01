@@ -19,4 +19,8 @@ public class NhanVienController {
     public List<NhanVien>  cau3() {
         return  nhanVienService.findNhanVienLuongNhoHon10000() ;
     }
+    @GetMapping("/cau8")
+    public int  cau8() {
+        return  nhanVienService.tongsoluongtraNhanVien() ;
+    }
 }
