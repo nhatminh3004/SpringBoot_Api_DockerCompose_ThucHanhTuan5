@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RestController;
 import springdatajpa._nhatminh.entity.ChuyenBay;
 import springdatajpa._nhatminh.repository.ChuyenbayRepository;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 @RestController
@@ -37,5 +39,17 @@ public class ChuyenBayController {
     @GetMapping("/cau17")
     public List<ChuyenBay> cau17() {
         return chuyenbayRepository.chuyenbayADenBVaQuayVeA();
+    }
+    @GetMapping("/cau18")
+    public List <HashMap<String, Object>> cau18() {
+        List<Object[]> listObject= chuyenbayRepository.sochuyenbayxuatphatTheoTungGA();
+        List <HashMap<String,Object>> giaTriReturn =new ArrayList<>();
+        for (Object[] obj : listObject){
+            HashMap<String,Object> tempMap =new HashMap<>();
+            tempMap.put("Ga xuất phát :",obj[0]);
+            tempMap.put("Số chuyến bay :",obj[1]);
+            giaTriReturn.add(tempMap);
+        }
+        return giaTriReturn;
     }
 }

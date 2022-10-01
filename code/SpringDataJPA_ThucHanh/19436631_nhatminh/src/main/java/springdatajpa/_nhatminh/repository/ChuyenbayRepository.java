@@ -33,7 +33,7 @@ public interface ChuyenbayRepository extends JpaRepository<ChuyenBay, String> {
     @Query(value = "select  * from chuyenbay where gadi in (select  gaden from chuyenbay) and gaden in (select  gadi from  chuyenbay) ", nativeQuery = true)
     public List<ChuyenBay> chuyenbayADenBVaQuayVeA();
     @Query(value = "select gadi,count(*) as \"số chuyến bay xuất phát\" from chuyenbay group by  gadi ", nativeQuery = true)
-    public List<String> sochuyenbayxuatphatTheoTungGA();
+    public List<Object[]> sochuyenbayxuatphatTheoTungGA();
     @Query(value = "select gadi,sum(chiphi) as \"số chi phí phải trả\" from chuyenbay group by  gadi", nativeQuery = true)
     public List<String> tongchiphiphaitraPhiCongCuaTungChuyenBay();
     @Query(value = "select macb from chuyenbay where  giodi<'12:00' group by  macb", nativeQuery = true)
