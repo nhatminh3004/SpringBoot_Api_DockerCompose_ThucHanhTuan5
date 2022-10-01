@@ -23,4 +23,8 @@ public class NhanVienController {
     public int  cau8() {
         return  nhanVienService.tongsoluongtraNhanVien() ;
     }
+    @GetMapping("/cau9")
+    public List<String>  cau9() {
+        return  nhanVienService.manhanvienLaiMayBayBoeing() ;
+    }
 }
