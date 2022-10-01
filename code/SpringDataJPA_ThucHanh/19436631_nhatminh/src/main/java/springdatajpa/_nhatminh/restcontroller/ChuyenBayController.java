@@ -18,4 +18,8 @@ public class ChuyenBayController {
     public List<ChuyenBay> cau1() {
         return chuyenbayRepository.findChuyenBayDiDaLat("DAD");
     }
+    @GetMapping("/cau4")
+    public List<ChuyenBay> cau4() {
+        return chuyenbayRepository.findChuyenBayDoDaiHon8000andNhoHon10000();
+    }
 }
