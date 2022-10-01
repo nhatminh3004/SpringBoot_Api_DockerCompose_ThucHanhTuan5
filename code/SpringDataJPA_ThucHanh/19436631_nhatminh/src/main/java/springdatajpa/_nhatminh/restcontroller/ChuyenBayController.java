@@ -22,4 +22,8 @@ public class ChuyenBayController {
     public List<ChuyenBay> cau4() {
         return chuyenbayRepository.findChuyenBayDoDaiHon8000andNhoHon10000();
     }
+    @GetMapping("/cau5")
+    public List<ChuyenBay> cau5() {
+        return chuyenbayRepository.findChuyenBayCau5("SGN","BMV");
+    }
 }
