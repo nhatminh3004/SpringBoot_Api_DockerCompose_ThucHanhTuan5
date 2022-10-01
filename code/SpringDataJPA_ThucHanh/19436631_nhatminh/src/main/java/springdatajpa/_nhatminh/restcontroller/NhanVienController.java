@@ -31,4 +31,8 @@ public class NhanVienController {
     public List<NhanVien>  cau10() {
         return  nhanVienService.findNhanVienBoeing747() ;
     }
+    @GetMapping("/cau12")
+    public List<String>  cau12() {
+        return  nhanVienService.findMaSoPhiCongBoeingAndAirbus() ;
+    }
 }
