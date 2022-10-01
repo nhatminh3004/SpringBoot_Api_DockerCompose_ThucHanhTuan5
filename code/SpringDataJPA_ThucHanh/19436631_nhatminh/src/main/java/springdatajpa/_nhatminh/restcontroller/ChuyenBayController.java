@@ -64,4 +64,8 @@ public class ChuyenBayController {
         }
         return giaTriReturn;
     }
+    @GetMapping("/cau20")
+    public List<String> cau20() {
+        return chuyenbayRepository.danhsachChuyenBayKhoiHanhTruoc12h();
+    }
 }
