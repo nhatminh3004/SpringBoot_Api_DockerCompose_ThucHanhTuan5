@@ -8,6 +8,8 @@ import springdatajpa._nhatminh.entity.NhanVien;
 import springdatajpa._nhatminh.repository.MayBayRepository;
 import springdatajpa._nhatminh.repository.NhanVienRepository;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 @RestController
@@ -42,6 +44,19 @@ public class NhanVienController {
     @GetMapping("/cau22")
     public List<String>  cau22() {
         return  nhanVienService.findNhanVienLaiDuoc3LoaiMayBay();
+    }
+    @GetMapping("/cau23")
+    public List <HashMap<String, Object>> cau23() {
+        List<Object[]> listObject= nhanVienService.cau23();
+        List <HashMap<String,Object>> giaTriReturn =new ArrayList<>();
+        for (Object[] obj : listObject){
+            HashMap<String,Object> tempMap =new HashMap<>();
+            tempMap.put("Mã phi công :",obj[0]);
+            tempMap.put("Tầm bay lớn nhất  :",obj[1]);
+            tempMap.put("Loại máy bay:",obj[2]);
+            giaTriReturn.add(tempMap);
+        }
+        return giaTriReturn;
     }
 
 }
