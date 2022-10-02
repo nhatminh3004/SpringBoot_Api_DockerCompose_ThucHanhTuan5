@@ -217,31 +217,31 @@ class ApplicationTests {
         }
     }
 
-    @Test
-        //Với mỗi ga có chuyến bay xuất phát từ đó cho biết có bao nhiêu chuyến bay khởi hành từ ga đó.
-    void cau18() {
+//    @Test
+//        //Với mỗi ga có chuyến bay xuất phát từ đó cho biết có bao nhiêu chuyến bay khởi hành từ ga đó.
+//    void cau18() {
+//
+//        List<String> listThongTinChuyenBay = chuyenbayService.sochuyenbayxuatphatTheoTungGA();
+//        System.out.println("Danh sách số chuyến bay xuất phát theo từng ga : : ");
+//        for (String info : listThongTinChuyenBay) {
+//
+//            System.out.println(info);
+//
+//        }
+//    }
 
-        List<String> listThongTinChuyenBay = chuyenbayService.sochuyenbayxuatphatTheoTungGA();
-        System.out.println("Danh sách số chuyến bay xuất phát theo từng ga : : ");
-        for (String info : listThongTinChuyenBay) {
-
-            System.out.println(info);
-
-        }
-    }
-
-    @Test
-        //Với mỗi ga có chuyến bay xuất phát từ đó cho biết có bao nhiêu chuyến bay khởi hành từ ga đó.
-    void cau19() {
-
-        List<String> listchiphiPhaiTraChoTungChuyenBay = chuyenbayService.tongchiphiphaitraPhiCongCuaTungChuyenBay();
-        System.out.println("Tổng chi phí phải trả cho từng chuyến bay : ");
-        for (String info : listchiphiPhaiTraChoTungChuyenBay) {
-
-            System.out.println(info);
-
-        }
-    }
+//    @Test
+//        //Với mỗi ga có chuyến bay xuất phát từ đó cho biết có bao nhiêu chuyến bay khởi hành từ ga đó.
+//    void cau19() {
+//
+//        List<String> listchiphiPhaiTraChoTungChuyenBay = chuyenbayService.tongchiphiphaitraPhiCongCuaTungChuyenBay();
+//        System.out.println("Tổng chi phí phải trả cho từng chuyến bay : ");
+//        for (String info : listchiphiPhaiTraChoTungChuyenBay) {
+//
+//            System.out.println(info);
+//
+//        }
+//    }
 
     @Test
         //	Cho biết danh sách các chuyến bay có thể khởi hành trước 12:00
@@ -256,18 +256,18 @@ class ApplicationTests {
         }
     }
 
-    @Test
-        //	Với mỗi địa điểm xuất phát cho biết có bao nhiêu chuyến bay có thể khởi hành trước 12:00.
-    void cau21() {
-
-        List<String> listChuyenBayKhoiHanhTruoc12h = chuyenbayService.cau21();
-        System.out.println("Danh sách chuyến bay khởi hành trước 12h theo từng địa điểm : ");
-        for (String cb : listChuyenBayKhoiHanhTruoc12h) {
-
-            System.out.println(cb);
-
-        }
-    }
+//    @Test
+//        //	Với mỗi địa điểm xuất phát cho biết có bao nhiêu chuyến bay có thể khởi hành trước 12:00.
+//    void cau21() {
+//
+//        List<String> listChuyenBayKhoiHanhTruoc12h = chuyenbayService.cau21();
+//        System.out.println("Danh sách chuyến bay khởi hành trước 12h theo từng địa điểm : ");
+//        for (String cb : listChuyenBayKhoiHanhTruoc12h) {
+//
+//            System.out.println(cb);
+//
+//        }
+//    }
 
     @Test
         //		Cho biết mã số của các phi công chỉ lái được 3 loại máy bay
@@ -282,31 +282,31 @@ class ApplicationTests {
         }
     }
 
-    @Test
-        //Với mỗi phi công có thể lái nhiều hơn 3 loại máy bay, cho biết mã số phi công và tầm bay lớn nhất của các loại máy bay mà phi công đó có thể lái.
-    void cau23() {
+//    @Test
+//        //Với mỗi phi công có thể lái nhiều hơn 3 loại máy bay, cho biết mã số phi công và tầm bay lớn nhất của các loại máy bay mà phi công đó có thể lái.
+//    void cau23() {
+//
+//        List<String> list = nhanvienService.cau23();
+//        System.out.println(" Danh sách phi công có thể lái nhiều hơn 3 loại máy bay có tầm bay lớn nhất của các loại máy bay mà phi công đó có thể lái : ");
+//        for (String nv : list) {
+//
+//            System.out.println(nv);
+//
+//        }
+//    }
 
-        List<String> list = nhanvienService.cau23();
-        System.out.println(" Danh sách phi công có thể lái nhiều hơn 3 loại máy bay có tầm bay lớn nhất của các loại máy bay mà phi công đó có thể lái : ");
-        for (String nv : list) {
-
-            System.out.println(nv);
-
-        }
-    }
-
-    @Test
-        //Với mỗi phi công cho biết mã số phi công và tổng số loại máy bay mà phi công đó có thể lái
-    void cau24() {
-
-        List<String> list = nhanvienService.cau24();
-        System.out.println(" Mã phi công và tổng só loại máy bay có thể lái : ");
-        for (String nv : list) {
-
-            System.out.println(nv);
-
-        }
-    }
+//    @Test
+//        //Với mỗi phi công cho biết mã số phi công và tổng số loại máy bay mà phi công đó có thể lái
+//    void cau24() {
+//
+//        List<String> list = nhanvienService.cau24();
+//        System.out.println(" Mã phi công và tổng só loại máy bay có thể lái : ");
+//        for (String nv : list) {
+//
+//            System.out.println(nv);
+//
+//        }
+//    }
 
     @Test
         //Tìm nhân viên không phải là phi công
@@ -336,16 +336,16 @@ class ApplicationTests {
         }
     }
 
-    @Test
-        //Tổng lương phải trả cho nhân viên
-    void cau27() {
-
-        List<String> list = nhanvienService.tongLuongTraPhiCong();
-
-
-        System.out.println("Tổng lương phải trả cho nhân viên là : " + list);
-
-    }
+//    @Test
+//        //Tổng lương phải trả cho nhân viên
+//    void cau27() {
+//
+//        List<String> list = nhanvienService.tongLuongTraPhiCong();
+//
+//
+//        System.out.println("Tổng lương phải trả cho nhân viên là : " + list);
+//
+//    }
     @Test
         //28.Tìm các chuyến bay có thể được thực hiện bởi tất cả các loại máy bay Boeing.
     void cau28() {

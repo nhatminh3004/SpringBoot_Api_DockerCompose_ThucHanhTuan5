@@ -51,6 +51,9 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+		<finalName>nhatminh-api-docker</finalName>
+
+
 	</build>
 
 </project>
